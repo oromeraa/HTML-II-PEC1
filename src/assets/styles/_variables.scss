@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  # Global variables
+\*------------------------------------*/
+
 @use "sass:color";
 
 $font-family-sans-serif:
@@ -5,8 +9,28 @@ $font-family-sans-serif:
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$font-family-ubuntu: "Ubuntu", sans-serif;
+
+$sabero-blue: #0071bc;
+$sabero-green: #008f4c;
+$sabero-gray: #e5e5e5;
+$sabero-gold: #eac102;
+$sabero-red: #ed1c24;
+$sabero-black: #000;
+
+$website-bg: color.scale($sabero-gray, $lightness: 70%);
+$navbar-bg: color.scale($sabero-blue, $lightness: 50%);
+$section-bg: color.scale($sabero-green, $lightness: 80%);
+$footer-bg: color.scale($sabero-blue, $lightness: 50%);
+
+$shadow-color: color.scale($sabero-black, $lightness: 50%);
+
+$card-bg: color.scale($sabero-gray, $lightness: 80%);
+
+$rating-checked: $sabero-gold;
+$rating-unchecked: $sabero-gray;
+
+$radius: 10px;
 
 $mqMinWidth: 420px;
+

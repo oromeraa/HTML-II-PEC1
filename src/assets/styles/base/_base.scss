@@ -1,0 +1,57 @@
+/*------------------------------------*\
+  # Base styles
+\*------------------------------------*/
+
+@use "../variables";
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  font-family: variables.$font-family-ubuntu;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: variables.$sabero-black;
+  background-color: variables.$website-bg;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+main {
+  gap: 2rem;
+}
+
+section {
+  margin: 2rem;
+  padding: 1rem;
+  gap: 2rem;
+
+  background-color: variables.$section-bg;
+
+  box-shadow: 0 .5rem 1rem variables.$shadow-color;
+  border-radius: variables.$radius;
+}
+
+footer {
+  background-color: variables.$footer-bg;
+}
+
+h1 {
+  font-family: variables.$font-family-ubuntu;
+  font-size: 2rem;
+  font-weight: bold;
+}

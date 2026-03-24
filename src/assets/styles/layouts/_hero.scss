@@ -1,0 +1,49 @@
+/*------------------------------------*\
+  # Hero section styles
+\*------------------------------------*/
+
+@use "../variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: url("../../assets/images/playa-sabero.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+.hero__text {
+  height: max-content;
+
+  font-size: 5rem;
+  font-weight: bolder;
+  letter-spacing: 1rem;
+
+  color: variables.$sabero-gray;
+}
+
+.hero__stepped-title {
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+  gap: 5rem;
+}
+
+.hero__stepped-title .hero__text:nth-child(1) {
+  align-self: flex-start;
+}
+
+.hero__stepped-title .hero__text:nth-child(2) {
+  align-self: center;
+}
+
+.hero__stepped-title .hero__text:nth-child(3) {
+  align-self: flex-end;
+}
+.hero__image {
+  width: 100vh;
+}
+

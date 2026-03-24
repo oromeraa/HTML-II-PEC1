@@ -1,20 +1,22 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+/*------------------------------------*\
+  # Main SCSS file
+\*------------------------------------*/
 
-/**
- * Import dependencies
- */
-@use "dependencies";
+// Dependencies and variables
+@use "dependencies"; 
+@use "variables";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+// Base and common styles
+@use "base/base";
 
-@use "layouts/home";
+// Layouts
+@use "layouts/hero";
+@use "layouts/comments";
+@use "layouts/header";
+@use "layouts/footer";
 
-/**
- * Do NOT include anything else in this file!
- */
+// Modules
+@use "modules/comment__card";
+
+// States
+@use "states/states";

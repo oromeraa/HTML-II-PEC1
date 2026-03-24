@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  # Navbar styles
+\*------------------------------------*/
+
+@use "../variables";
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 2rem;  
+  
+  background-color: variables.$navbar-bg;
+  backdrop-filter: blur(20px);
+}
+
+.menu__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu__logo-img {
+  padding: 1rem;
+  height: 5rem;
+}
+
+.menu__logo-text {
+  font-size: 1.5rem;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu__item {
+  margin-right: 1rem;
+
+  list-style: none;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+

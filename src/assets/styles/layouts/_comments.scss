@@ -1,0 +1,12 @@
+@use "../variables";
+
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
