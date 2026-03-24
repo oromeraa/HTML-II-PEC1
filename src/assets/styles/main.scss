@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 // Dependencies and variables
-@use "dependencies"; 
-@use "variables";
+@use "abstracts/dependencies"; 
+
 
 // Base and common styles
 @use "base/base";
@@ -16,7 +16,7 @@
 @use "layouts/footer";
 
 // Modules
-@use "modules/comment__card";
+// @use "modules/comment__card";
 
 // States
 @use "states/states";

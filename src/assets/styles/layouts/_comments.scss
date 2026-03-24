@@ -1,12 +1,28 @@
-@use "../variables";
 
-.comments {
+
+@use "../abstracts/variables";
+
+.comment {
   display: flex;
   flex-direction: column;
-}
 
-.comments__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  } 
+
+  &__card {
+    background-color: variables.$card-bg;
+    padding: 1rem;
+
+    border-radius: variables.$radius;
+
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  &__rating {
+    display: inline-block;
+  }
 }
