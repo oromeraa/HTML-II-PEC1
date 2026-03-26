@@ -21,13 +21,13 @@ $sabero-red: #ed1c24;
 $sabero-black: #000;
 
 // Custom colors
-$website-bg: color.scale($sabero-green, $lightness: 90%);
-$navbar-bg: color.scale($sabero-blue, $lightness: 50%);
-$section-bg: color.scale($sabero-gray, $lightness: 100%);
-$footer-bg: color.scale($sabero-blue, $lightness: 50%);
-$card-bg: color.scale($sabero-gray, $lightness: 50%);
+$website-bg: color.adjust($sabero-green, $alpha: -0.4);
+$navbar-bg: color.adjust($sabero-blue, $alpha: -0.5);
+$section-bg: $sabero-gray;
+$footer-bg: color.adjust($sabero-blue, $alpha: -0.5);
+$card-bg: color.adjust($sabero-gray, $alpha: -0.2);
 
-$shadow-color: color.scale($sabero-black, $lightness: 50%);
+$shadow-color: color.adjust($sabero-black, $alpha: -0.5);
 
 $rating-checked: $sabero-gold;
 $rating-unchecked: $sabero-gray;

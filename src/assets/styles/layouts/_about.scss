@@ -1,0 +1,10 @@
+/*------------------------------------*\
+  # About styles
+\*------------------------------------*/
+
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.about {
+    gap: 1rem;
+}

@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 
   background: url("../../assets/images/playa-sabero.jpeg");
   background-repeat: no-repeat;
@@ -20,9 +20,9 @@
     height: max-content;
     line-height: 1rem;
 
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: bolder;
-    letter-spacing: 1rem;
+    letter-spacing: .5rem;
     text-align: center;
 
     color: variables.$sabero-gray;

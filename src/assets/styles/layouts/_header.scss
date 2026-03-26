@@ -2,29 +2,36 @@
   # Navbar styles
 \*------------------------------------*/
 
-
-
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
 .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: auto;
-  padding: 1rem;  
-  
+  padding: 1rem;
+
   background-color: variables.$navbar-bg;
 
   @include mixins.design-for("tablet") {
+    top: 3rem;
+    left: 3rem;
+    right: 3rem;
+    
     flex-direction: row;
     justify-content: space-between;
-    margin: 2rem;
-    padding: 2rem;
+
+    padding-left: 4rem;
+    padding-right: 4rem;
 
     background-color: variables.$section-bg;
-    border-radius: variables.$radius;
+    border-radius: 100px;
   }
 
   &__logo {
