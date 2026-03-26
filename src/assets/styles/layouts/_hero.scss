@@ -1,10 +1,8 @@
 /*------------------------------------*\
   # Hero section styles
 \*------------------------------------*/
-
-
-
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .hero {
   display: flex;
@@ -13,17 +11,29 @@
   align-items: center;
   height: 100vh;
 
-  background: url("../../assets/images/playa-sabero.jpeg") no-repeat center center;
+  background: url("../../assets/images/playa-sabero.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   &__text {
     height: max-content;
+    line-height: 1rem;
 
-    font-size: 5rem;
+    font-size: 10vw;
     font-weight: bolder;
     letter-spacing: 1rem;
+    text-align: center;
 
     color: variables.$sabero-gray;
+
+    // @include mixins.design-for("tablet") {
+    //   font-size: 4rem;
+    // }
+
+    @include mixins.design-for("desktop") {
+      font-size: 5rem;
+    } 
   }
 
   /*------------------------------------*\
@@ -33,20 +43,41 @@
   &__stepped-title {
     display: flex;
     flex-direction: column;
-    width: 100vh;
+    width: 80%;
     gap: 5rem;
-  }
 
-  &__stepped-title .hero__text:nth-child(1) {
-    align-self: flex-start;
-  }
+    @include mixins.design-for("tablet") {
+      flex-direction: column;
+    }
 
-  &__stepped-title .hero__text:nth-child(2) {
-    align-self: center;
-  }
+    @include mixins.design-for("desktop") {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
 
-  &__stepped-title .hero__text:nth-child(3) {
-    align-self: flex-end;
+    & .hero__text:nth-child(1) {
+      align-self: center;
+
+      @include mixins.design-for("tablet") {
+        align-self: flex-start;
+      }
+    }
+
+    & .hero__text:nth-child(2) {
+      align-self: center;
+
+      @include mixins.design-for("tablet") {
+        align-self: center;
+      }
+    }
+
+    & .hero__text:nth-child(3) {
+      align-self: center;
+
+      @include mixins.design-for("tablet") {
+        align-self: flex-end;
+      }
+    }
   }
 }
-

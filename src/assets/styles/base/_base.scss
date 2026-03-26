@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 @use "../abstracts/variables";
-
+@use "../abstracts/mixins";
 *,
 *::before,
 *::after { 
@@ -18,7 +18,7 @@ body {
   height: 100vh;
 
   font-family: variables.$font-family-ubuntu;
-  font-size: 16px;
+  font-size: medium;
   line-height: 24px;
 
   color: variables.$sabero-black;
@@ -32,18 +32,28 @@ header {
 }
 
 main {
-  gap: 2rem;
+  gap: 1rem;
+
+  @include mixins.design-for("tablet") {
+    gap: 2rem;
+  }
 }
 
 section {
-  margin: 2rem;
+  max-width: 2000px;
+  margin: 1rem;
   padding: 1rem;
-  gap: 2rem;
+  gap: 1rem;
 
   background-color: variables.$section-bg;
 
   box-shadow: 0 .5rem 1rem variables.$shadow-color;
   border-radius: variables.$radius;
+
+  @include mixins.design-for("tablet") {
+    margin: 2rem;
+    gap: 2rem;
+  }
 }
 
 footer {
@@ -52,6 +62,36 @@ footer {
 
 h1 {
   font-family: variables.$font-family-ubuntu;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
+
+  @include mixins.design-for("tablet") {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+
+  @include mixins.design-for("tablet") {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  @include mixins.design-for("tablet") {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+
+  @include mixins.design-for("tablet") {
+    font-size: 1.5rem;
+  }
 }

@@ -4,6 +4,7 @@
 
 @use "sass:color";
 
+// Font families
 $font-family-sans-serif:
   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -11,6 +12,7 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $font-family-ubuntu: "Ubuntu", sans-serif;
 
+// Colors based on the coat of arms of Sabero
 $sabero-blue: #0071bc;
 $sabero-green: #008f4c;
 $sabero-gray: #e5e5e5;
@@ -18,20 +20,22 @@ $sabero-gold: #eac102;
 $sabero-red: #ed1c24;
 $sabero-black: #000;
 
-$website-bg: color.scale($sabero-gray, $lightness: 70%);
+// Custom colors
+$website-bg: color.scale($sabero-green, $lightness: 90%);
 $navbar-bg: color.scale($sabero-blue, $lightness: 50%);
-$section-bg: color.scale($sabero-green, $lightness: 80%);
+$section-bg: color.scale($sabero-gray, $lightness: 100%);
 $footer-bg: color.scale($sabero-blue, $lightness: 50%);
+$card-bg: color.scale($sabero-gray, $lightness: 50%);
 
 $shadow-color: color.scale($sabero-black, $lightness: 50%);
-
-$card-bg: color.scale($sabero-gray, $lightness: 80%);
 
 $rating-checked: $sabero-gold;
 $rating-unchecked: $sabero-gray;
 
+// Border radius
 $radius: 10px;
 
+// Media queries
 $mqMaxMobile: 767px;
 $mqMinTablet: 768px;
 $mqMinDesktop: 1024px;

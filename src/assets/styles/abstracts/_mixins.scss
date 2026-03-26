@@ -6,12 +6,18 @@
 
 @mixin design-for($device) {
   @if $device == "phone" {
-    @media (max-width: variables.$mqMaxMobile) { @content; }
+    @media (max-width: variables.$mqMaxMobile) { 
+      @content; 
+    }
   }
   @if $device == "tablet" {
-    @media (min-width: variables.$mqMinTablet) { @content; }
+    @media (min-width: variables.$mqMinTablet) { 
+      @content; 
+    }
   }
   @if $device == "desktop" {
-    @media (min-width: variables.$mqMinDesktop) { @content; }
+    @media (min-width: variables.$mqMinDesktop) { 
+      @content; 
+    }
   }
 }
