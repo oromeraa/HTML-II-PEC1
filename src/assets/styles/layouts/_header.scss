@@ -5,13 +5,7 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
-.menu {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: 100;
-  
+.menu {  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,7 +26,6 @@
     padding-left: 4rem;
     padding-right: 4rem;
 
-    background-color: variables.$section-bg;
     border-radius: 100px;
   }
 
