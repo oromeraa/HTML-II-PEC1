@@ -14,3 +14,11 @@
   const university = "UOC";
   console.log(`Hello, ${university}!`);
 })();
+
+
+const map = L.map('map').setView([42.8372821, -5.1286137], 13);
+
+const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);

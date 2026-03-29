@@ -37,6 +37,7 @@ header {
 
 main {
   gap: 1rem;
+  align-items: center;
 
   @include mixins.design-for("tablet") {
     gap: 2rem;

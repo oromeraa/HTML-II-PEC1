@@ -22,7 +22,7 @@ $sabero-black: #000;
 
 // Custom colors
 $website-bg: color.adjust($sabero-green, $alpha: -0.4);
-$navbar-bg: color.adjust($sabero-blue, $alpha: -0.5);
+$navbar-bg: color.change($sabero-gray, $alpha: 0.5);
 $section-bg: $sabero-gray;
 $footer-bg: color.adjust($sabero-blue, $alpha: -0.5);
 $card-bg: color.adjust($sabero-gray, $alpha: -0.2);
