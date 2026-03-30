@@ -2,20 +2,20 @@
   # Navbar styles
 \*------------------------------------*/
 
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .menu {  
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 
   transition: all .4s ease-in-out;
-  background-color: variables.$navbar-bg;
+  background-color: $navbar-bg;
 
-  @include mixins.design-for("desktop") {
+  @include design-for("desktop") {
     top: 3rem;
     left: 3rem;
     right: 3rem;
@@ -40,15 +40,17 @@
   &__logo-img {
     height: 3rem;
 
-    @include mixins.design-for("tablet") {
+    @include design-for("tablet") {
       height: 5rem;
     }
   }
 
   &__logo-text {
+    display: none;
     font-size: 1.5rem;
 
-    @include mixins.design-for("tablet") {
+    @include design-for("tablet") {
+      display: flex;
       font-size: 3rem;
     }
   }
@@ -64,7 +66,7 @@
     background-color: transparent;
     border: none;
 
-    @include mixins.design-for("tablet") {
+    @include design-for("tablet") {
       display: none;
     }
   }
@@ -85,7 +87,7 @@
     gap: 0.8rem;
     margin-top: 0.5rem;
 
-    @include mixins.design-for("tablet") {
+    @include design-for("tablet") {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -99,7 +101,7 @@
 
     list-style: none;
 
-    @include mixins.design-for("tablet") {
+    @include design-for("tablet") {
       margin-right: 1rem;
     }
   }

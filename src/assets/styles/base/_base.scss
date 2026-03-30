@@ -2,8 +2,8 @@
   # Base styles
 \*------------------------------------*/
 
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 *,
 *::before,
 *::after { 
@@ -15,31 +15,41 @@
 body {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
 
-  font-family: variables.$font-family-ubuntu;
+  font-family: $font-family-ubuntu;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 
-  color: variables.$sabero-black;
-  background-color: variables.$website-bg;
+  color: $sabero-black;
+  background-color: $website-bg;
+
+  @include design-for("large-desktop") {
+    font-size: 1.5rem;
+  }
 }
 
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   
   height: 10vh;
   max-height: 100px;
+
+  @include design-for("desktop") {
+    margin: 2rem;
+  }
 }
 
 main {
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
 
-  @include mixins.design-for("tablet") {
+  @include design-for("tablet") {
     gap: 2rem;
   }
 }
@@ -47,58 +57,79 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  max-width: 2000px;
-  margin: 2rem;
+  width: 100%;
+  max-width: $mqMaxDesktop;
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding: 2rem;
   gap: 2rem;
 
-  background-color: variables.$section-bg;
+  background-color: $section-bg;
 
-  box-shadow: 0 .5rem 1rem variables.$shadow-color;
-  border-radius: variables.$radius;
+  box-shadow: 0 .5rem 1rem $shadow-color;
+  border-radius: $radius;
 
-  @include mixins.design-for("tablet") {
-    margin: 3rem;
+  @include design-for("tablet") {
+    margin-left: 3rem;
+    margin-right: 3rem;
     gap: 3rem;
+  }
+
+  &__title {
+    text-align: start;
+    color: $sabero-green;
   }
 }
 
 footer {
-  height: 10vh;
-  max-height: 100px;
+  min-height: 80px;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-color: variables.$footer-bg;
+  background-color: $footer-bg;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+  font-weight: bold;
 }
 
 h1 {
-  font-family: variables.$font-family-ubuntu;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2.25rem;
+  text-align: start;
+  color: $sabero-green;
 
-  @include mixins.design-for("tablet") {
-    font-size: 4rem;
+  @include design-for("tablet") {
+    font-size: 3rem;
+  }
+
+  @include design-for("large-desktop") {
+    font-size: 4.5rem;
   }
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
 
-  @include mixins.design-for("tablet") {
-    font-size: 3rem;
+  @include design-for("tablet") {
+    font-size: 2.25rem;
+  }
+
+  @include design-for("large-desktop") {
+    font-size: 3.25rem;
   }
 }
 
 h3 {
-  font-weight: bold;
   font-size: 1.5rem;
 
-  @include mixins.design-for("tablet") {
+  @include design-for("tablet") {
+    font-size: 1.75rem;
+  }
+
+  @include design-for("large-desktop") {
     font-size: 2rem;
   }
 }
@@ -106,7 +137,22 @@ h3 {
 p {
   font-size: 1rem;
 
-  @include mixins.design-for("tablet") {
-    font-size: 1.5rem;
+  @include design-for("tablet") {
+    font-size: 1.125rem;
   }
+
+  @include design-for("large-desktop") {
+    font-size: 1.4rem; 
+  }
+}
+
+abbr {
+  cursor: help;
+}
+
+a {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: $sabero-black;
 }

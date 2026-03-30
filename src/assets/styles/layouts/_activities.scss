@@ -1,0 +1,61 @@
+/*------------------------------------*\
+  # Activities styles
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.activities {
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include design-for("tablet") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include design-for("desktop") {
+      gap: 3rem;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background: $card-bg;
+    border-radius: $radius;
+    overflow: hidden;
+    box-shadow: 0 4px 15px $shadow-color;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px $shadow-color;
+
+      .activities__card-image {
+        transform: scale(1.1);
+      }
+    }
+
+    &-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    &-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &-title {
+      color: $sabero-blue;
+    }
+  }
+}

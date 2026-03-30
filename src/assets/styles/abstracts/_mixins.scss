@@ -20,4 +20,9 @@
       @content; 
     }
   }
+  @if $device == "large-desktop" {
+    @media (min-width: variables.$mqMaxDesktop) { 
+      @content; 
+    }
+  }
 }

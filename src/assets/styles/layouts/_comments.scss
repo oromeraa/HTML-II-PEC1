@@ -1,29 +1,43 @@
 
 
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
-@use "../abstracts/functions";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
 
 .comment {
 
   &__list {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+
+    @include design-for("tablet") {
+      gap: 2rem;
+    }
   } 
 
   &__card {
-    background-color: variables.$card-bg;
-    padding: 1rem;
-
-    border-radius: variables.$radius;
-
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+    
+    background-color: $card-bg;
+    padding: 1.5rem;
 
-    @include mixins.design-for("tablet") {
-      grid-template-columns: auto auto;
+    border-radius: $radius;
+
+    @include design-for("tablet") {
       gap: 1rem;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include design-for("tablet") {
+        flex-direction: row;
+      }
     }
   }
 
@@ -31,17 +45,18 @@
     display: inline-block;
     font-family: "Font Awesome 7 Free";
     font-size: 2rem;
+    text-shadow: 1px 1px 3px $shadow-color;
 
     @for $i from 1 through 5 {
       &[data-rating="#{$i}"] {
         &::before {
-          color: variables.$sabero-gold;
-          content: functions.rating-star($i);
+          color: $sabero-gold;
+          content: rating-star($i);
         }
 
         &::after {
-          color: variables.$sabero-gray;
-          content: functions.rating-star(5 - $i);
+          color: $sabero-gray;
+          content: rating-star(5 - $i);
         }
       }
     }
