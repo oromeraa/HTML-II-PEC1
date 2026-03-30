@@ -7,17 +7,22 @@
 @mixin design-for($device) {
   @if $device == "phone" {
     @media (max-width: variables.$mqMaxMobile) { 
-      @content; 
+      @content;
     }
   }
   @if $device == "tablet" {
     @media (min-width: variables.$mqMinTablet) { 
-      @content; 
+      @content;
     }
   }
   @if $device == "desktop" {
     @media (min-width: variables.$mqMinDesktop) { 
-      @content; 
+      @content;
+    }
+  }
+  @if $device == "large-desktop" {
+    @media (min-width: variables.$mqMaxDesktop) { 
+      @content;
     }
   }
 }

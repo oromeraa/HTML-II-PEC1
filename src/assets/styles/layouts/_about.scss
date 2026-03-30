@@ -2,9 +2,9 @@
   # About styles
 \*------------------------------------*/
 
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .about {
-    gap: 1rem;
+  // gap: 1rem;
 }

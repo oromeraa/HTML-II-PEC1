@@ -1,0 +1,17 @@
+/*------------------------------------*\
+  # Environment styles
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+#map {
+  width: 100%;
+  height: 350px;
+  border-radius: $radius;
+  box-shadow: 0 4px 15px $shadow-color;
+
+  @include design-for("tablet") {
+    height: 500px;
+  }
+}
