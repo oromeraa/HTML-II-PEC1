@@ -19,11 +19,10 @@
   &__card {
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
     gap: 1rem;
     
     background-color: $card-bg;
-    padding: 1.5rem;
-
     border-radius: $radius;
 
     @include design-for("tablet") {
@@ -43,7 +42,6 @@
 
   &__rating {
     display: inline-block;
-    font-family: "Font Awesome 7 Free";
     font-size: 2rem;
     text-shadow: 1px 1px 3px $shadow-color;
 

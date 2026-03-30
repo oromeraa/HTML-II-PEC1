@@ -21,14 +21,14 @@ $sabero-red: #ed1c24;
 $sabero-black: #000;
 
 // Custom colors
-$website-bg: color.adjust($sabero-green, $alpha: -0.4);
+$website-bg: color.adjust($sabero-green, $alpha: -.4);
 $website-bg: color.mix($sabero-black, $sabero-gray, 50%);
-$navbar-bg: color.adjust($sabero-gray, $alpha: -0.5);
+$navbar-bg: color.adjust($sabero-gray, $alpha: -.5);
 $section-bg: $sabero-gray;
-$footer-bg: color.adjust($sabero-blue, $alpha: -0.5);
-$card-bg: color.adjust($sabero-black, $alpha: -0.9);
+$footer-bg: color.adjust($sabero-blue, $alpha: -.5);
+$card-bg: color.adjust($sabero-black, $alpha: -.9);
 
-$shadow-color: color.adjust($sabero-black, $alpha: -0.5);
+$shadow-color: color.adjust($sabero-black, $alpha: -.5);
 
 
 // $rating-checked: $sabero-gold;
@@ -47,4 +47,4 @@ $mqMaxDesktop: 1440px;
 // Tile sizes
 $tile-regular: 1fr;
 $tile-hover: 1.3fr;
-$tile-reduced: 0.5fr;
+$tile-reduced: .5fr;

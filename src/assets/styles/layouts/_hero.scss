@@ -9,23 +9,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   min-width: 100%;
+  min-height: 100vh;
 
   background: url("../../assets/images/playa-sabero.jpeg");
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 
   &__text {
     height: max-content;
+    font-weight: bolder;
     line-height: 1rem;
 
-    font-weight: bolder;
     letter-spacing: 1rem;
-    text-align: center;
 
     color: $sabero-gray;
+    text-align: center;
 
     // @include design-for("tablet") {
     //   font-size: 4rem;
@@ -33,7 +33,7 @@
 
     @include design-for("desktop") {
       font-size: 5rem;
-    } 
+    }
   }
 
   /*------------------------------------*\
