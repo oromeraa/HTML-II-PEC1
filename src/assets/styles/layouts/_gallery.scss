@@ -1,0 +1,96 @@
+/*------------------------------------*\
+  # Gallery style
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.gallery {  
+  &__grid {
+    display: grid;
+    grid-template-columns: $tile-regular;
+    gap: 2rem;
+
+    @include design-for("desktop") {
+      grid-template-columns: repeat(3, $tile-regular); // total: 3fr
+      grid-template-rows: repeat(4, $tile-regular); // total: 4fr
+      grid-template-areas: "a a b" "a a c" "d e c" "d f f";
+      height: 80vh;    
+
+      &:has(.gallery__tile:nth-child(1):hover) {
+        grid-template-columns: $tile-hover $tile-hover $tile-reduced;
+        grid-template-rows: $tile-hover $tile-hover $tile-reduced $tile-reduced;
+      }
+
+      &:has(.gallery__tile:nth-child(2):hover) {
+        grid-template-columns: $tile-reduced $tile-reduced $tile-hover;
+        grid-template-rows: $tile-hover $tile-reduced $tile-reduced $tile-reduced;
+      }
+
+      &:has(.gallery__tile:nth-child(3):hover) {
+        grid-template-columns: $tile-reduced $tile-reduced $tile-hover;
+        grid-template-rows: $tile-reduced $tile-hover $tile-hover $tile-reduced;
+      }
+
+      &:has(.gallery__tile:nth-child(4):hover) {
+        grid-template-columns: $tile-hover $tile-reduced $tile-reduced;
+        grid-template-rows: $tile-reduced $tile-reduced $tile-hover $tile-hover;
+      }
+
+      &:has(.gallery__tile:nth-child(5):hover) {
+        grid-template-columns: $tile-reduced $tile-hover $tile-reduced;
+        grid-template-rows: $tile-reduced $tile-reduced $tile-hover $tile-reduced;
+      }
+
+      &:has(.gallery__tile:nth-child(6):hover) {
+        grid-template-columns: $tile-reduced $tile-hover $tile-hover;
+        grid-template-rows: $tile-reduced $tile-reduced $tile-reduced $tile-hover;
+      }
+    }
+  }
+
+  &__tile {
+    aspect-ratio: 4 / 3;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+
+    background-color: $sabero-green;
+    border-radius: $radius;
+
+    @include design-for("desktop") {
+      aspect-ratio: auto;
+
+      &:nth-child(1) {
+        grid-area: a;
+      }
+      &:nth-child(2) {
+        grid-area: b;
+      }
+      &:nth-child(3) {
+        grid-area: c;
+      }
+      &:nth-child(4) {
+        grid-area: d;
+      }
+      &:nth-child(5) {
+        grid-area: e;
+      }
+      &:nth-child(6) {
+        grid-area: f;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

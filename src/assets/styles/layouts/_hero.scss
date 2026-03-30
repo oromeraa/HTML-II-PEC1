@@ -1,0 +1,85 @@
+/*------------------------------------*\
+  # Hero section styles
+\*------------------------------------*/
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+
+  background: url("../../assets/images/playa-sabero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__text {
+    height: max-content;
+    font-weight: bolder;
+    line-height: 1rem;
+
+    letter-spacing: 1rem;
+
+    color: $sabero-gray;
+    text-align: center;
+  }
+
+  /*------------------------------------*\
+    # Stepped title
+  \*------------------------------------*/
+
+  &__stepped-title {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 5rem;
+    justify-content: center;
+    text-wrap: nowrap;
+
+    transition: all .4s ease-in-out;
+
+    @include design-for("tablet") {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include design-for("desktop") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @include design-for("large-desktop") {
+      display: none;
+    }
+
+    & .hero__text:nth-child(1) {
+      align-self: center;
+
+      @include design-for("tablet") {
+        align-self: flex-start;
+      }
+    }
+
+    & .hero__text:nth-child(2) {
+      align-self: center;
+
+      @include design-for("tablet") {
+        align-self: center;
+      }
+    }
+
+    & .hero__text:nth-child(3) {
+      align-self: center;
+
+      @include design-for("tablet") {
+        align-self: flex-end;
+      }
+    }
+  }
+}

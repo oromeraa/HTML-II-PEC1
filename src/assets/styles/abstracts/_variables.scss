@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  # Global variables
+\*------------------------------------*/
+
+@use "sass:color";
+
+// Font families
+$font-family-sans-serif:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-serif: "Georgia", "Times New Roman", serif;
+
+$font-family-ubuntu: "Ubuntu", sans-serif;
+
+// Colors based on the coat of arms of Sabero
+$sabero-blue: #0071bc;
+$sabero-green: #008f4c;
+$sabero-gray: #e5e5e5;
+$sabero-gold: #eac102;
+$sabero-red: #ed1c24;
+$sabero-black: #000;
+
+// Custom colors
+$website-bg: color.adjust($sabero-green, $alpha: -.4);
+$website-bg: color.mix($sabero-black, $sabero-gray, 50%);
+$navbar-bg: color.adjust($sabero-gray, $alpha: -.1);
+$section-bg: $sabero-gray;
+$footer-bg: color.adjust($sabero-blue, $alpha: -.5);
+$card-bg: color.adjust($sabero-black, $alpha: -.9);
+
+$shadow-color: color.adjust($sabero-black, $alpha: -.5);
+
+// $rating-checked: $sabero-gold;
+$rating-checked: color.adjust($sabero-gold, $lightness: 50%);
+$rating-unchecked: $sabero-gray;
+
+// Border radius
+$radius: 1rem;
+
+// Media queries
+$mqMaxMobile: 767px;
+$mqMinTablet: 768px;
+$mqMinDesktop: 1024px;
+$mqMaxDesktop: 1440px;
+
+// Tile sizes
+$tile-regular: 1fr;
+$tile-hover: 1.3fr;
+$tile-reduced: .5fr;
+
+// navbar animations
+$elastic-hook: cubic-bezier(.175, .885, .32, 1.5); // float to fix
+$elastic-unhook: cubic-bezier(.68, -.8, .2, 2.5); // fix to float
