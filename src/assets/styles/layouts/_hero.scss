@@ -26,14 +26,6 @@
 
     color: $sabero-gray;
     text-align: center;
-
-    // @include design-for("tablet") {
-    //   font-size: 4rem;
-    // }
-
-    @include design-for("desktop") {
-      font-size: 5rem;
-    }
   }
 
   /*------------------------------------*\
@@ -45,17 +37,25 @@
     flex-direction: column;
     width: 80%;
     gap: 5rem;
+    justify-content: center;
+    text-wrap: nowrap;
 
     transition: all .4s ease-in-out;
 
     @include design-for("tablet") {
+      display: flex;
       flex-direction: column;
     }
 
     @include design-for("desktop") {
+      display: flex;
       flex-direction: row;
       align-items: center;
       gap: 2rem;
+    }
+
+    @include design-for("large-desktop") {
+      display: none;
     }
 
     & .hero__text:nth-child(1) {

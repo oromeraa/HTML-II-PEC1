@@ -23,13 +23,12 @@ $sabero-black: #000;
 // Custom colors
 $website-bg: color.adjust($sabero-green, $alpha: -.4);
 $website-bg: color.mix($sabero-black, $sabero-gray, 50%);
-$navbar-bg: color.adjust($sabero-gray, $alpha: -.5);
+$navbar-bg: color.adjust($sabero-gray, $alpha: -.1);
 $section-bg: $sabero-gray;
 $footer-bg: color.adjust($sabero-blue, $alpha: -.5);
 $card-bg: color.adjust($sabero-black, $alpha: -.9);
 
 $shadow-color: color.adjust($sabero-black, $alpha: -.5);
-
 
 // $rating-checked: $sabero-gold;
 $rating-checked: color.adjust($sabero-gold, $lightness: 50%);
@@ -48,3 +47,7 @@ $mqMaxDesktop: 1440px;
 $tile-regular: 1fr;
 $tile-hover: 1.3fr;
 $tile-reduced: .5fr;
+
+// navbar animations
+$elastic-hook: cubic-bezier(0.175, 0.885, 0.32, 1.5); // float to fix
+$elastic-unhook: cubic-bezier(0.68, -0.8, 0.2, 2.5); // fix to float
